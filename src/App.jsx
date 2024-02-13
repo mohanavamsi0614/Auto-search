@@ -16,7 +16,7 @@ function App() {
       }}
        />
       <div ref={refe}>
-        {data.filter((i)=>{return state!==""?i.name.startsWith(state):0}).map((i,ind)=>
+        {data.filter((i)=>{return state!==""?i.name.toLowerCase().startsWith(state.toLowerCase()):0}).map((i,ind)=>
         <h1 key={ind} >{i.name}</h1>)
         }
       </div>
